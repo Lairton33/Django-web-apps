@@ -1,0 +1,13 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<form action="" method="post">
+    {% csrf_token %}
+    <input type="text" required placeholder="Product" name="name" value="{{ product.name }}">
+    <input type="number" required placeholder="Price" name="price" value="{{ product.price }}">
+    <input type="text" required placeholder="Description" name="description" value="{{ product.description }}">
+    <input type="file" placeholder="Product image" name="image">
+    <input type="submit" value="Update">
+</form>
+<a href="/">Cancel</a>
+{% endblock %}

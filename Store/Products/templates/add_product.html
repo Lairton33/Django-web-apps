@@ -1,0 +1,12 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<form action="" method="post">
+    {% csrf_token %}
+    <input type="text" required placeholder="Product" name="name">
+    <input type="number" required placeholder="Price" name="price" >
+    <input type="text" required placeholder="Description" name="description">
+    <input type="file" placeholder="Product image" name="image">
+    <input type="submit" value="ADD">
+</form>
+{% endblock %}
